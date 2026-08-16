@@ -1,64 +1,46 @@
-# COS30045 – Data Visualisation  
-## Exercise 0.2 – Energy Website
+# Appliance Energy Consumption Website
 
-Welcome to **Exercise 0.2** for COS30045 Data Visualisation.
+This project is a small three-page website for COS30045 Exercise 0.2.
 
-In this exercise, you will build a simple **Energy Data Webpage** using **HTML, CSS, and JavaScript**. The purpose of this exercise is to familiarise you with the development workflow using **GitHub and VS Code**, while preparing the foundation for future data visualisation tasks.
+## Pages
 
----
+- Home
+- Televisions
+- About Us
 
-# Objective
+## Features
 
-The objectives of this exercise are:
+- Shared navigation menu on all pages
+- Clickable power logo that returns to the Home page
+- Active page styling
+- Hover effect on navigation links
+- Shared external CSS file
+- Simple FAQ section on the Home page
+- Footer with year, name and GenAI acknowledgement
 
-- Understand how to use **GitHub for version control**
-- Practice **web development structure**
-- Build a **basic website**
-- Maintain **regular commits**
-- Identify commits that include **GenAI-generated code**
+## Folder Structure
 
----
-
-# Step 1 – Fork the Repository
-
-1. Open this repository.
-2. Click **Fork** at the top right of the page.
-3. This will create a copy of the repository in your GitHub account.
-
-Example:
-
-Original repository : "github.com/rishmaf/COS30045-Data-Visualization/energy-webpage"
-
-Your forked repository : "github.com/yourusername/COS30045-Data-Visualization/energy-webpage"
-
-
----
-
-# Step 2 – Clone the Repository
-
-Clone your forked repository to your local machine using **VS Code** or the terminal.
-
-
-
-# Step 3 – Project Structure
-
-
-Your project must follow the structure below.
-
-```bash
-energy-webpage-v1
-│
-├── css
-│   └── styles.css
-│
-├── js
-│   └── scripts.js
-│
-├── images
-│   └── PowerIcon.png
-│
-├── data
-│   └── data.csv
-│
+```text
+Exercise 0.2/
 ├── index.html
+├── televisions.html
+├── about.html
+├── assets/
+│   ├── css/
+│   │   └── styles.css
+│   └── img/
+│       └── PowerIcon.png
 └── README.md
+```
+
+## Generative AI Reflection
+
+I used ChatGPT/Codex to help create the basic HTML and CSS structure for this exercise.
+
+I used GenAI for page structure, simple placeholder wording, and navigation consistency.
+
+I kept the website simple and edited the content so it is easy to understand. I also kept the styling plain, with colours based on the power logo.
+
+I learned how the same navigation and footer can be repeated across multiple HTML pages.
+
+One limitation is that GenAI can write too much or make a website look over-designed, so I kept the final version small and practical.
