@@ -48,4 +48,4 @@ The bar chart will be built in the next exercise.
 
 ## AI Acknowledgement
 
-I used AI to help structure the files and D3 code for loading, typing, sorting, and checking the CSV data.
+I used AI to help me understand the instructions for this task  and structure the files.
