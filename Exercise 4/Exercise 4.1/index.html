@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 4.1 - Drawing SVGs</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Exercise 4.1: Drawing SVGs</h1>
+
+  <h2>SVG House and Garden</h2>
+
+  <svg width="700" height="500" viewBox="0 0 700 500">
+    <!-- Sky -->
+    <rect x="0" y="0" width="700" height="320" fill="#8bd3e6" />
+
+    <!-- Grass -->
+    <rect x="0" y="320" width="700" height="180" fill="#2f8f2f" />
+
+    <!-- Sun -->
+    <circle cx="580" cy="90" r="45" fill="yellow" stroke="orange" stroke-width="4" />
+
+    <!-- Clouds -->
+    <g fill="white" opacity="0.9">
+      <ellipse cx="115" cy="90" rx="42" ry="20" />
+      <ellipse cx="150" cy="85" rx="35" ry="25" />
+      <ellipse cx="180" cy="93" rx="45" ry="20" />
+    </g>
+
+    <!-- Birds -->
+    <g fill="none" stroke="#243447" stroke-width="3" stroke-linecap="round">
+      <path d="M480 75 Q490 65 500 75" />
+      <path d="M500 75 Q510 65 520 75" />
+      <path d="M535 135 Q545 125 555 135" />
+      <path d="M555 135 Q565 125 575 135" />
+    </g>
+
+    <!-- House body -->
+    <rect x="220" y="220" width="260" height="180" fill="#9b4f16" stroke="#3b1d08" stroke-width="4" />
+
+    <!-- Roof -->
+    <polygon points="190,220 350,90 510,220" fill="#cf833b" stroke="#3b1d08" stroke-width="4" />
+
+    <!-- Door -->
+    <rect x="320" y="310" width="60" height="90" fill="#bf6b35" stroke="#3b1d08" stroke-width="3" />
+
+    <!-- Door handle -->
+    <circle cx="368" cy="355" r="6" fill="black" />
+
+    <!-- Windows grouped together -->
+    <g fill="#c9f0ff" stroke="#122f7a" stroke-width="4" transform="translate(0, 0)">
+      <rect x="250" y="250" width="55" height="55" />
+      <rect x="395" y="250" width="55" height="55" />
+      <line x1="277.5" y1="250" x2="277.5" y2="305" />
+      <line x1="250" y1="277.5" x2="305" y2="277.5" />
+      <line x1="422.5" y1="250" x2="422.5" y2="305" />
+      <line x1="395" y1="277.5" x2="450" y2="277.5" />
+    </g>
+
+    <!-- Chimney -->
+    <rect x="405" y="120" width="35" height="75" fill="firebrick" stroke="black" stroke-width="2" />
+
+    <!-- Tree trunk -->
+    <rect x="90" y="260" width="35" height="140" fill="sienna" />
+
+    <!-- Tree leaves -->
+    <circle cx="80" cy="240" r="40" fill="forestgreen" />
+    <circle cx="120" cy="230" r="45" fill="forestgreen" />
+    <circle cx="105" cy="275" r="42" fill="forestgreen" />
+
+    <!-- Fence posts -->
+    <g stroke="white" stroke-width="5" stroke-linecap="round">
+      <line x1="525" y1="315" x2="525" y2="350" />
+      <line x1="565" y1="315" x2="565" y2="350" />
+      <line x1="605" y1="315" x2="605" y2="350" />
+      <line x1="645" y1="315" x2="645" y2="350" />
+    </g>
+
+    <!-- Garden path using polyline -->
+    <polyline
+      points="350,400 310,430 285,460 270,500"
+      fill="none"
+      stroke="#ffd23f"
+      stroke-width="14"
+      stroke-linecap="round"
+    />
+
+    <!-- Clothes line / fence line -->
+    <line x1="520" y1="330" x2="650" y2="330" stroke="white" stroke-width="4" />
+
+    <!-- Pond using ellipse -->
+    <ellipse cx="570" cy="420" rx="80" ry="35" fill="#9ed9e8" stroke="#1847d4" stroke-width="4" />
+
+    <!-- Flowers -->
+    <g>
+      <line x1="95" y1="425" x2="95" y2="465" stroke="darkgreen" stroke-width="4" />
+      <circle cx="95" cy="418" r="7" fill="#ffd23f" />
+      <circle cx="85" cy="418" r="7" fill="#ff5a7a" />
+      <circle cx="105" cy="418" r="7" fill="#ff5a7a" />
+      <circle cx="95" cy="408" r="7" fill="#ff5a7a" />
+
+      <line x1="150" y1="415" x2="150" y2="465" stroke="darkgreen" stroke-width="4" />
+      <circle cx="150" cy="408" r="7" fill="#ffd23f" />
+      <circle cx="140" cy="408" r="7" fill="#8b5cf6" />
+      <circle cx="160" cy="408" r="7" fill="#8b5cf6" />
+      <circle cx="150" cy="398" r="7" fill="#8b5cf6" />
+    </g>
+
+    <!-- Text label -->
+    <text x="260" y="455" font-size="26" fill="#1b1b1b">Sneha's SVG Garden</text>
+  </svg>
+
+  <h2>Shape Coordinate Annotations</h2>
+
+  <p>
+    The SVG coordinate system starts at the top-left corner. The x value increases to the right,
+    and the y value increases downward.
+  </p>
+
+  <h3>Rectangle Example</h3>
+  <p>
+    The house body uses a rectangle with x="220", y="220", width="260", and height="180".
+  </p>
+  <img src="images/annotated-rect.png" alt="Annotated rectangle coordinates">
+
+  <h3>Circle Example</h3>
+  <p>
+    The sun uses a circle with cx="580", cy="90", and r="45".
+  </p>
+  <img src="images/annotated-circle.png" alt="Annotated circle coordinates">
+   <h3>Polygon Example</h3>
+<p>
+  The roof uses a polygon shape. A polygon is made by listing several coordinate
+  points. SVG connects these points together to create the shape.
+</p>
+<p>
+  In this example, the roof points are (190, 220), (350, 90), and (510, 220).
+  The point (190, 220) is the left bottom corner, (350, 90) is the top peak,
+  and (510, 220) is the right bottom corner.
+</p>
+<img src="images/annotated-polygon.png" alt="Annotated polygon coordinates">
+  
+
+  <h3>Line Example</h3>
+  <p>
+    The line uses x1, y1 for the starting point and x2, y2 for the ending point.
+  </p>
+  <img src="images/annotated-line.png" alt="Annotated line coordinates">
+
+  <h2>AI Acknowledgement</h2>
+  <p>
+    I used AI to help to understand how SVG coordinates work. Also, i took help from it to understand the code structure and how to use different shapes in SVG. However, I did not copy any code from AI.
+    I modified the shapes, colours, positions, and structure myself for this exercise.
+  </p>
+</body>
+</html>
