@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 4.2 - D3 Page Elements</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="site-nav">
+      <a class="active" href="index.html">Exercise 4.2</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h1>Energy Consumption Website</h1>
+      <p>
+        This page uses D3 to change HTML styling, add new text to the page,
+        and draw a visible SVG rectangle.
+      </p>
+    </section>
+
+    <section class="container">
+      <h2>Energy Saving Advice</h2>
+      <p>
+        Choosing appliances with better energy ratings can reduce electricity
+        costs and household energy use.
+      </p>
+    </section>
+
+    <section>
+      <h2>D3 SVG Example</h2>
+      <p>
+        The rectangle below is added to the SVG using D3 in the separate
+        <code>js/main.js</code> file.
+      </p>
+      <p>
+        This shows that D3 can select an empty SVG and insert a new shape into the page.
+      </p>
+      <svg width="500" height="180" aria-label="D3 generated rectangle example"></svg>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Sneha. D3 is used for Exercise 4.2 DOM changes.</p>
+  </footer>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
