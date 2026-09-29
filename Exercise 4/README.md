@@ -20,3 +20,5 @@ The exercises in this folder guide you through the fundamental concepts needed t
 
 - **Exercise 4.6 – Scaling charts**  
   Use D3 scales to map data values to positions in a chart.
+  ## AI Declaration
+  I used AI to understand the whole concept of D3 and howscaling actually works to complete the task.
