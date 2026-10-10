@@ -1,65 +1,141 @@
-# Exercise 6 – Interactive Visualisations
+# Exercise 6: Interactive Visualisations
 
 ## Overview
-In this exercise you will build **interactive data visualisations using D3.js**. Interaction allows users to explore the data and gain deeper insights through features such as filtering and tooltips.
 
-Use the **same repository you forked earlier for this unit** and complete this exercise inside the **Exercise 6 folder**.
+This folder contains the Week 6 D3.js interactive visualisation exercises. The exercises use the TV energy consumption dataset to build a histogram, add filters, create a scatterplot, colour code data points, and add tooltips.
 
----
+The purpose of this exercise set is to practise interactive data visualisation techniques using D3.js. Interaction allows users to explore patterns in the data instead of only viewing a static chart.
 
-## Exercise 6.1 – Interactive Histogram: Filtering
+## Exercises
 
-### Aim
-Build a histogram and add **interactive filters**.
+### Exercise 6.1: Histogram
 
-### Purpose
-Interaction is one of the key advantages of visualisations on the web. In this exercise you will build a **histogram using the TV dataset** and allow users to filter the data.
+Folder: `6.1`
 
-Users should be able to explore energy consumption for different TV screen technologies such as:
+This exercise creates a histogram showing the frequency of TV models across labelled energy consumption ranges.
 
-- LCD
+Main file:
+
+- `6.1/index.html`
+
+Key skills:
+
+- Loading CSV data with `d3.csv`
+- Converting CSV values into numbers
+- Creating histogram bins with `d3.bin`
+- Drawing SVG rectangles for histogram bars
+- Adding x-axis and y-axis
+- Separating code into data loading, shared constants, interactions, and chart files
+
+### Exercise 6.2: Filters
+
+Folder: `6.2`
+
+This exercise adds interactive filter buttons to the histogram. Users can view all TVs or filter the histogram by screen technology.
+
+Main file:
+
+- `6.2/index.html`
+
+Key skills:
+
+- Creating filter buttons with D3
+- Tracking active filter state
+- Filtering data by `screenTech`
+- Updating the histogram when a button is clicked
+- Using transitions to animate changes
+
+Filter options:
+
+- All
 - LED
+- LCD
 - OLED
 
-### Preparation
-Before starting, review:
+### Exercise 6.3: Scatterplot
 
-- This week's lecture slides
-- **Chapter 7 of Dufour and Meeks (2024)**
+Folder: `6.3`
 
----
+This exercise adds a scatterplot to the same webpage as the filtered histogram. The scatterplot shows the relationship between TV star rating and labelled energy consumption.
 
-## Exercise 6.2 – Interactive Scatterplot: Tooltips
+Main file:
 
-### Aim
-Build a scatterplot and add **tooltips and colour coding**.
+- `6.3/index.html`
 
-### Purpose
-Tooltips are one of the most common interactive features in data visualisations. In this exercise you will create a **scatterplot using the TV dataset**.
+Key skills:
 
-The chart should allow users to explore the relationship between:
+- Creating a scatterplot with SVG circles
+- Mapping star rating to the x-axis
+- Mapping energy consumption to the y-axis
+- Colour coding points by screen technology
+- Adding a legend for screen types
+- Keeping scatterplot scales separate from histogram scales
 
-- Energy consumption
-- Star rating
-- Screen size
-- Screen technology
+### Exercise 6.4: Tooltips
 
-Tooltips should display additional information such as **screen size**, and colours should represent **screen type**.
+Folder: `6.4`
 
-### Preparation
-Before starting, review:
+This exercise adds tooltips to the scatterplot. When the user hovers over a scatterplot point, a tooltip appears and shows the TV screen size.
 
-- This week's lecture slides
-- **Chapter 7 of Dufour and Meeks (2024)**
+Main file:
 
----
+- `6.4/index.html`
 
-## Instructions
+Key skills:
 
-1. Open your **existing forked repository**.
-2. Navigate to the **Exercise 6 folder**.
-3. Add the files needed to implement the histogram and scatterplot.
-4. Implement the required interactive features using **D3.js**.
-5. Commit and push your changes regularly to GitHub.
+- Creating an SVG tooltip using a group, rectangle, and text
+- Using `mouseenter` and `mouseleave` event listeners
+- Displaying screen size on hover
+- Positioning the tooltip relative to the selected circle
+- Keeping the histogram filters working while adding scatterplot interactivity
 
-Your forked repository will serve as your **submission record**.
+## How To View
+
+Open each exercise's `index.html` file in a browser.
+
+Recommended viewing method:
+
+- Open the project in VS Code
+- Right-click the relevant `index.html`
+- Select **Open with Live Server**
+
+Live Server is recommended because the visualisations load CSV files.
+
+## Folder Structure
+
+```text
+Exercise 6/
+  README.md
+  6.1/
+    README.md
+    index.html
+    css/
+    data/
+    js/
+  6.2/
+    README.md
+    index.html
+    css/
+    data/
+    js/
+  6.3/
+    README.md
+    index.html
+    css/
+    data/
+    js/
+  6.4/
+    README.md
+    index.html
+    css/
+    data/
+    js/
+```
+
+## Data Source
+
+The exercises use the Week 6 TV dataset prepared from the Energy Rating Data for household appliances - Televisions dataset.
+
+## AI Acknowledgement
+
+I used AI to help structure the D3 code, explain histogram bins, filters, scatterplots, colour scales, legends, and tooltips, and prepare documentation. I reviewed, tested, and customised the code and README files for this exercise.
