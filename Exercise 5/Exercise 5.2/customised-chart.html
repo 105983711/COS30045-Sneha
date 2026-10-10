@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 5.2 - Customised Chart</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <nav class="site-nav">
+      <a href="../Exercise 5.1/index.html">Exercise 5.1</a>
+      <a href="index.html">Exercise 5.2</a>
+      <a class="active" href="customised-chart.html">Customised Chart</a>
+      <a href="../Exercise 5.3/index.html">Exercise 5.3</a>
+      <a href="../Exercise 5.3/customised-donut.html">Customised Donut</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h1>Customised Chart</h1>
+      <p>
+        This version experiments with the Exercise 5.2 line chart by changing
+        the curve style and turning the line into a stepped area chart.
+      </p>
+    </section>
+
+    <section class="chart-section">
+      <h2>Average Electricity Spot Price Area Chart</h2>
+      <p>
+        The chart uses the same average spot price data, but draws a light green
+        area under a stepped line to explore a different D3 style.
+      </p>
+      <div id="customised-chart" class="responsive-svg-container"></div>
+    </section>
+
+    <section>
+      <h2>Customisations Used</h2>
+      <p>
+        I added x and y axis labels, labelled the data line, changed the curve
+        style to a step line, and turned the line chart into an area chart while
+        keeping the data points visible.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Sneha. COS30045 Exercise 5.2 customised chart.</p>
+  </footer>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="js/customised-chart.js"></script>
+</body>
+</html>
