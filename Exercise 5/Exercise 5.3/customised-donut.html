@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 5.3 - Customised Donut</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <nav class="site-nav">
+      <a href="../Exercise 5.1/index.html">Exercise 5.1</a>
+      <a href="../Exercise 5.2/index.html">Exercise 5.2</a>
+      <a href="../Exercise 5.2/customised-chart.html">Customised Chart</a>
+      <a href="index.html">Exercise 5.3</a>
+      <a class="active" href="customised-donut.html">Customised Donut</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h1>Customised Donut</h1>
+      <p>
+        This version experiments with the donut chart by changing the colour
+        scheme, slice spacing, corner radius, label position, and centre text.
+      </p>
+    </section>
+
+    <section class="chart-section">
+      <h2>Customised TV Screen Size Donut</h2>
+      <p>
+        The chart keeps the same data but uses rounded slices, a larger centre
+        hole, percentage labels, and a centre total.
+      </p>
+      <div id="customised-donut" class="responsive-svg-container"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Sneha. COS30045 Exercise 5.3 customised donut.</p>
+  </footer>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="js/customised-donut.js"></script>
+</body>
+</html>
