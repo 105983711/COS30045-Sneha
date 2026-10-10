@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background: #f6f8f7;
+}
+
+.site-nav {
+  display: flex;
+  gap: 10px;
+  padding: 14px 8%;
+  background: #0f5132;
+}
+
+.site-nav a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+  background: #f2c94c;
+  color: #1f1f1f;
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 32px 20px;
+}
+
+section {
+  margin-bottom: 28px;
+}
+
+.intro {
+  border-left: 5px solid #f2c94c;
+  padding-left: 18px;
+}
+
+h1,
+h2 {
+  color: #0f5132;
+  line-height: 1.2;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+.chart-section {
+  padding-top: 8px;
+}
+
+.responsive-svg-container {
+  width: 100%;
+  max-width: 820px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.responsive-svg-container svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: white;
+}
+
+.bar {
+  fill: green;
+}
+
+.bar-label {
+  font-size: 14px;
+  font-weight: bold;
+  fill: #222;
+}
+
+.axis-label {
+  font-size: 16px;
+  font-weight: bold;
+  fill: #222;
+}
+
+.x-axis text,
+.y-axis text {
+  font-size: 13px;
+}
+
+.x-axis path,
+.y-axis path,
+.x-axis line,
+.y-axis line {
+  stroke: #555;
+}
+
+footer {
+  padding: 18px 20px;
+  background: #0f5132;
+  color: white;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .site-nav {
+    flex-direction: column;
+  }
+
+  .bar-label,
+  .x-axis text,
+  .y-axis text {
+    font-size: 11px;
+  }
+}
