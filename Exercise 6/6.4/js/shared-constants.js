@@ -1,0 +1,36 @@
+// Set up dimensions and margins.
+const margin = { top: 40, right: 30, bottom: 60, left: 70 };
+const width = 900;
+const height = 460;
+const innerWidth = width - margin.left - margin.right;
+const innerHeight = height - margin.top - margin.bottom;
+
+// Set up colours accessible globally.
+const barColor = "#606464";
+const bodyBackgroundColor = "#fffaf0";
+
+// Set up the scales.
+const xScale = d3.scaleLinear();
+const yScale = d3.scaleLinear();
+
+// Set up inner chart variable, tooltip dimensions, scales, and colour scale
+// for the scatterplot.
+let innerChartS;
+const tooltipWidth = 65;
+const tooltipHeight = 32;
+const xScaleS = d3.scaleLinear();
+const yScaleS = d3.scaleLinear();
+const colorScale = d3.scaleOrdinal();
+
+// Create a bin generator using d3.bin.
+const binGenerator = d3.bin()
+  .value(d => d.energyConsumption)
+  .thresholds(d3.range(0, 2801, 200));
+
+// Array of filter options for screen types.
+const filters_screen = [
+  { id: "all", label: "All", isActive: true },
+  { id: "LED", label: "LED", isActive: false },
+  { id: "LCD", label: "LCD", isActive: false },
+  { id: "OLED", label: "OLED", isActive: false }
+];
