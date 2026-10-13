@@ -25,15 +25,16 @@ const drawScatterplot = data => {
     .domain(screenTypes)
     .range(d3.schemeCategory10);
 
-  innerChartS
-    .selectAll("circle")
-    .data(data)
-    .join("circle")
-    .attr("class", "scatter-point")
-    .attr("r", 4)
-    .attr("cx", d => xScaleS(d.star))
-    .attr("cy", d => yScaleS(d.energyConsumption))
-    .attr("fill", d => colorScale(d.screenTech));
+ innerChartS
+  .selectAll("circle")
+  .data(data)
+  .join("circle")
+  .attr("class", "scatter-point")
+  .attr("r", 4)
+  .attr("cx", d => xScaleS(d.star))
+  .attr("cy", d => yScaleS(d.energyConsumption))
+  .attr("fill", d => colorScale(d.screenTech))
+  .attr("opacity", 0.6);
 
   const bottomAxis = d3.axisBottom(xScaleS)
     .ticks(8)
